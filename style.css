@@ -1,0 +1,193 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    /* overflow: hidden; */
+    
+}
+
+#home{
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image:url('./images/bluesky5.webp')    
+    
+     
+}
+ #navbarNav{ 
+    height: 55px;
+} 
+#caption{
+    height:480px;
+    background-position: 100%;
+    background-size: cover;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.09),rgba(0, 0, 0, 0) ),url('./images/solo9.jpg');
+    
+}
+#caption h3{
+    font-family: 'Dancing Script', cursive;
+    font-size: 85px;
+    color: rgb(252, 18, 96);
+    
+}
+h1{
+    font-family: 'Kaushan Script', cursive;
+}
+#logoimg{
+    filter: brightness(0.9);
+}
+/* card flip */
+#imgflip{
+  position: relative;
+  top: 0;
+  left: 0;
+  /* width: 45%; */
+  height: 100vh;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  transition: all 0.9s ease;
+}
+.front{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    /* background: #ffc728; */
+    color: #000;
+}
+.back{
+    position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: #fafafa;
+  color: #333;
+  text-align: center;
+  transform:perspective(600px) rotateY(180deg);
+}
+#imgflip:hover{
+    transform: rotateY(180deg);
+  }
+  #imgabtme,#imgabtme2{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+}
+#video{
+    height: 500px;
+}
+
+    #subscribe{
+        background-color: lightblue;
+    }
+    .content{
+        display: inline-block;
+    }
+    
+    .imgdiv .overlay{
+        left:0;
+        bottom:-86%;
+        transition-duration:0.8s;
+        background:rgba(0,0,0,0.5); 
+    }
+    .imgdiv:hover .overlay{
+        bottom:0%;
+        left:0;        
+    }
+    
+/* Latest Blog */
+    #blog img{
+        transition-duration: 1s ;
+    }
+    #blog img:hover{
+        transform: scale(0.9);
+        }
+
+    /* resources */
+    
+    #resources .card{
+        box-shadow: 5px 5px 10px black;
+        
+    }
+    
+    #resources .card:hover .card-body{
+        background: linear-gradient(to top,lightblue,white);   
+        transition-duration:1s
+        
+    }
+   
+    
+@media only screen and (max-width:600px) {
+    #home{
+        background-image:none;
+    }
+    #caption{
+        background-position: 90%;
+        background-size: cover;
+        background-repeat:no-repeat;
+        background-image:url('./images/solo9.jpg');
+        height:80%;
+    }
+    #caption h3{
+        font-size:50px;
+    }
+    #caption .h5{
+        display:none;
+    }
+    #aboutme .row{
+        display:flex;
+        flex-direction:column;
+        
+    }
+    #imgabtme,#imgabtme2{
+        width:100%;
+        height:400px;
+        padding:0;
+    }
+    #imgflip{
+        top:30px;
+        width:100%;
+        height:500px;
+    }
+    .front,.back{
+        height:400px;
+    }
+    /* #destination img
+    {
+        width: 100vh;
+        height: auto;
+             
+    } */
+    #video h1{
+        font-size: 20px;
+    }
+    #destination .col{
+        width:400px;
+        height:300px;
+    }
+    #destination h3{
+        font-size:34px;
+    }
+        
+    
+} 
+@media  (min-width:601px) and (max-width:1200px){
+#caption h3{
+font-size:50px;
+        
+}
+#caption {
+    height:80%;
+}
+}
